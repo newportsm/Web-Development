@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<title>How to Use oEmbed</title>
+	<link rel="stylesheet" href="/style.css">	
+</head>
+<body>
+<div class="container">
+	<div class="masthead">
+		<h1>How to Use oEmbed</h1>
+	</div>
+	<div class="navigation">
+			<form action="/home" method="get">
+				<input type="submit" value="Home""></input>
+			</form>
+			<form action="/p1" method="get">
+				<input type="submit" value="Page 1"></input>
+			</form>
+			<form action="/p2" method="get">
+				<input type="submit" value="Page 2"></input>
+			</form>	
+			<form action="/p3" method="get">
+				<input type="submit" value="Page 3"></input>
+			</form>
+			<form action="/p4" method="get">
+				<input type="submit" value="Page 4"></input>
+			</form>
+			<form action="/p5" method="get">
+				<input type="submit" value="Page 5"></input>
+			</form>
+			<form action="/code" method="get">
+				<input type="submit" value="Examples"></input>
+			</form>		
+	</div>
+	<div class="content" id="bodyDiv">
+		{{{body}}}
+	</div>
+
+</div>
+</body>
+</html>

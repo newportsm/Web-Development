@@ -1,0 +1,36 @@
+<h1>How-To Guide: Google Maps API</h1>
+<h4>Created by Sarah Newport</h4>
+
+<p>
+For my first How-To Guide, I wanted to focus on a website or application that many of us are very familiar with in our everyday lives - Google Maps. It is a rare day for myself where I don't use Google Maps to either locate an establishment or to find directions. Not only do I use Google Map very often, but there is an overwhelmingly large amount of other applications and web services that use the Google Maps API. As someone who is new to javascript and API, I thought this would be a great starting point.
+</p>
+<p>At the bottom of this page, you see a map of the Washington DC area from Google I live just outside the city so will be using this location to demonstrate with. This How-To Guide is going to show you the steps needed to add such an appliction of whatever desired location to your own website.</p>
+<p>
+The three topics that I will be covering in this guide are:
+<ul>
+    <li>Steps to Obtain an API Key</li>
+	<li>Basic javascript code to display a map</li>
+	<li>Adding additional features to customaize the map</li>
+</ul>
+</p>
+
+<p>
+I've always seen Google has a king of internet services and they really do an amazing job at making learning how to use APIs easy. If after teaching yourself the basics on how to display your own map, you find yourself hungry for more knowledge then you can visit their webpage by clicking <a href="https://developers.google.com/maps/documentation/javascript/tutorial">here!</a>
+</p>
+
+
+<div id="map"></div>
+<script type="text/javascript">
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 38.907610, lng: -77.039288},
+    zoom: 8
+  });
+}
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSgPyKibtJWkQGOwIKlzxt5XT9eJWU5ps&callback=initMap">
+    </script>

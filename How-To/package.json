@@ -1,0 +1,16 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "CS 290 - Web Development. Week 10, How-To Guide",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sarah Newport",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-handlebars": "^2.0.1"
+  }
+}

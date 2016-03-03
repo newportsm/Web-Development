@@ -1,0 +1,102 @@
+<h2>Time to add your Google Map!</h2>
+
+<p>Now it's time for the real fun to begin, armed with your API key and a mission to add a map to your webpage or application!</p>
+
+<p>First, I will show you some sample code of an html page that shows the basic code for adding a map.</p>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style type="text/css"&gt;
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript"&gt;
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+
+    &lt;/script&gt;
+    &lt;script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=<var class="apiparam replaceable-credential">YOUR_API_KEY</var>&amp;callback=initMap"&gt;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>This code is directly from the Google Maps website. I tested it out on a simple html page that I named map.html and I successfully was able to load up the map of Sydney, Austraila. This code takes up the entire page so let's start to break it down so that we can make it more usable for our needs.</p>
+
+<h2>Where do I put my API Key?</h2>
+
+<p>After following the process of obtaining an API key for authenication, you must be wondering where are we going to place this in our code. We must look at the script call below.</p>
+
+<pre>
+ &lt;script async defer src="https://maps.googleapis.com/maps/api/js?key=<var class="apiparam replaceable-credential">YOUR_API_KEY</var>&amp;callback=initMap"&gt;
+    &lt;/script&gt;
+</pre>
+
+<p>This is where you will copy your saved API key and paste it into your code for authenication. Note in the script the <b>YOUR_API_KEY</b> - that's exactly where it goes. If you forget to do this, or add an improper code then you will recieve an error message upon trying to load your page. It would be a smart move to double check to make sure your code is correct, since without it - you won't have anything to work with!</p>
+
+<h2>Size of Map</h2>
+
+<p>The first step is to create a <b>div</b> to hold your map.</p>
+
+<pre>&lt;div id="map"&gt;&lt;/div&gt;</pre>
+
+<p>This will allow you to then go into your style.css to edit the height and width of the map to your liking. If you don't add a height to your map then by default the height will be zero and nothing will appear! Below I will include some sample code to place in your css file.</p>
+
+<pre>
+#map {
+    height: 300px;
+    width: 100%;
+    margin: 5px;
+}
+</pre>
+
+<p>The above code is directly from my own css file that helped me to make the google map on the front page a perfect size to fit in my body (instead of being a monster and taking up the whole page).</p>
+
+<h2>Location of Map</h2>
+
+<p>There are only two <b>required</b> options in the javascript portion. The first is center. If you copy and paste the code above looking to get another other than Sydney, Austraila, then you will be sadly disappointed. We must look closer at the javascript portion to find the code to determine the location.</p>
+
+<pre>
+center: {lat: -34.397, lng: 150.644},
+</pre>
+
+<p>center represents the location that will first appear on the google map when the page is located. The latitude and longatiude of the location can be found by going to the location you want on the google map and right clicking on the name.</p>
+
+<center><img src="http://i.imgur.com/OAbLvEs.png"></center>
+
+<p>This brings up the menu above and click on "What's here?"</p>
+
+<center><img src="http://i.imgur.com/lqE21Tn.png"></center>
+
+<p>The above numbers are the latitude followed by the longitude. Simply copy and paste the numbers into your own code.</p>
+
+<h2>ZOOM</h2>
+
+<pre>   zoom: 8</pre>
+
+<p>The second required part of the javascript text is 'zoom.' You can change this number depending on how much you want to map to be zoomed in on the location upon inital load of the page. The number of zoom can be selected from 0 to 18. The image below shows 0, 7, and 18.</p>
+
+<center><img src="http://i.imgur.com/bvlI4VW.png"></center>
+
+
+<h2>You did it!</h2>
+
+<p>Once your map is loaded, you will have the ability to play around with it as if you were on the original website. You will be able to zoom in and out, change your view to satellite, and even go to street view by moving the little yellow character to where you wish.</p>
+
+
+<hr>
+
+<p>Feelin Confident with the basics? Time to move on to extra features!</p>
+

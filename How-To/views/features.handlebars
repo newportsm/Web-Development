@@ -1,0 +1,86 @@
+<h2>Extra fun features to add to your map!</h2>
+<section>
+<p>On this page, I will list some addition features you can add to your map to make it even more interactive (or less) for you and your users. After reading through, you will be able to:</p>
+    <ul>
+    <li>Changing Languages</li>
+    <li>Add a marker to your map</li>
+    <li>Changing the type of map</li>
+    <li>Removing Features</li></ul>
+</section>
+<section>
+<h2>Changing Languages</h2>
+
+<p>In a globalized world, it is important to have the ability to change the google map to display in more than just English. We will use script code to accomplish this.</p>
+
+<pre>
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp language=ja"
+type="text/javascript"&gt;
+&lt;/script&gt;
+</pre>
+
+<p>The above example. using "ja" as the language selection for japanese. You need to make a note when adding this option that no matter the user's preference - that the map will be displayed in japanese. You can find a list of all the supported languages <a href="https://developers.google.com/maps/faq#languagesupport">here!</a></p>
+</section>
+
+<h2>Adding a marker to your map</h2>
+
+<p>On your website, you might want to display a map that already marks a specific location or establishment. Google Maps allows us to also do that on their API. When it comes to the marker option, we will be focusing on the javascript portion of the code. The following code is an example of what a simple marker would look lke:</p>
+
+<pre>
+function initMap() {
+    
+    var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat: -25.363, lng: 131.044};
+  });
+
+  var marker = new google.maps.Marker({
+    position: {lat: -25.363, lng: 131.044} ,
+    map: map,
+    title: 'LOOK AT ME!'
+  });
+}
+</pre>
+
+<p>The code shows up as:</p>
+
+<center><img src="http://i.imgur.com/OoEoo1w.png"></center>
+
+<p>As you can see we have added a whole new 'marker' block to the original code and requirements of just zoom and center. Writing the code this way, adds the marker to the original construction of the map. <b>positon</b> represents where the marker will be placed. You can place it at a position other than your original latitude and longitude - but make sure that it isn't out of view when loading the map. You can also change what the marker reads with <b>title</b> - you can change this to whatever you would like it to say.</p>
+
+<h2>Changing the type of Map</h2>
+
+<p>You have the option to change your map from the default 'Road Map' style, which is what you normally see when you access the google maps website. There are four different types of styles to pick from:</p>
+<ul>
+<li>Road Map - MapTypeId.ROADMAP</li>
+<li>Satellite Map - MapTypeId.SATELLITE</li>
+<li>Hybrid Mix of Road and Satellite - MapTypeId.HYBRID</li>
+<li>Terrain Map - MapTypeId.TERRAIN</li></ul>
+
+<p>In our javascrip code we need to declare mapOptions to access all the different syles of maps to choose from.</p>
+
+<pre>
+var mapOptions = {
+  zoom: 8,
+  center: {lat: -25.363, lng: 131.044},
+  mapTypeId: google.maps.MapTypeId.SATELLITE
+</pre>
+
+<p>The above example will display the map in the style of Satellite when the map is first uploaded. You can interchange this to any of the other three examples above to see which you would prefer.</p>
+
+<h2>Removing Features</h2>
+
+<p>If you are one of those people who doesn't like all the extra default features then you might wish to turn off the default API. Thankfully, Google has supplied us with an option to do so. We will again be using the mapOptions and boolean.</p>
+
+<pre>
+var mapOptions = {
+    zoom: 4,
+    center: {lat: -33, lng: 151},
+    disableDefaultUI: true
+}
+</pre>
+
+<p>disableDefaultUI must be marked true to turn off all the default features of the user interface.</p>
+
+<hr>
+
+Congrats on successfully adding your own personal google maps application to your webpage - feeling confident? then head over to the Google Maps API guide by clicking <a href="https://developers.google.com/maps/documentation/javascript/tutorial">here</a> and GO TO TOWN! Enjoy :)
