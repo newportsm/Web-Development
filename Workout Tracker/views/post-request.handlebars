@@ -1,0 +1,8 @@
+<h1>POST Request Received</h1>
+<br>
+<table style="border: solid 1px">
+<thead><td style="column-span: 2">Data received:</td></thead>
+  {{#each dataList}}
+    <tr><td><b>{{this.field}}:</b></td> <td> {{this.value}} </tr>
+  {{/each}}
+</table>

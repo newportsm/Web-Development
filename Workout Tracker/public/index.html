@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>Workout Recorder</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="outer">
+<div id="inner">
+
+<div id="tableEdit">
+<span id="editLabel">Add a workout:</span>
+
+<div id="formEntry">
+
+<table id="editTable">
+	<tr><td class="borderless">
+	<label for "name">Workout Name:</label>
+	</td><td class="borderless"><input type="text" name="name" id="name_edit">
+	</td>
+	<td class="borderless">
+		<label for "reps">Reps:</label>
+	</td><td class="borderless">
+			<input type="text" name="reps" id="reps_edit">
+	</td>
+	<td class="borderless">
+		<label for "weight">Weight Used:</label>
+	</td><td class="borderless">
+			<input type="text" name="weight" id="weight_edit">
+	</td>
+	</tr>
+	<tr><td class="borderless">
+		<label for "date">Date YYYY/MM/DD:</label>
+	</td><td class="borderless">
+			<input type="text" name="date" id="date_edit">
+	</td>
+		<td class="borderless">
+		<label for "lbs">Pounds:</label>
+	</td><td class="borderless">
+			<input type="radio" name="lbs" id="lbs_edit">
+	</td></tr>
+</table>
+<form>
+	<input type="button" value="Submit" id="saveChanges">
+</form>
+</div>
+</div>
+
+
+<div id="tableEdit">
+<span id="editLabel">Previous Workouts:</span>
+
+<table id="dataTable">
+	<thead>
+		<td><span class="bold">Name</span></td><br>
+		<td><span class="bold">Reps</span></td>
+		<td><span class="bold">Weight</span></td>
+		<td><span class="bold">Date</span></td>
+		<td><span class="bold">Lbs</span></td>
+		<td></td>
+	</thead>
+	<tbody id="displayData">
+
+	</tbody>
+</table>
+<br><input type="button" value="Reset Data" onclick="resetTable();">
+
+<!--
+<form>
+<input type="button" name="edit" value="Edit" id="editRow">
+<input type="button" name="delete" value="Delete" id="deleteRow">
+</form>
+-->
+
+</div>
+
+</div></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<h1>Result of sql operation</h1>
+<br>
+<table>
+<thead><td style="column-span: 2">Individual Data received:</td></thead>
+<tbody>
+{{#each results}}
+    <tr><td><b>ID: </b> {{this.results.id}}</td> <td><b>Name: </b> {{this.name}}</td>
+	<td><b>Reps: </b> {{reps}} </td><td><b>Weight: </b> {{this.weight}} </td>
+	<td><b>Date: </b> {{this.date}} </td></tr>
+  {{/each}}
+ </tbody>
+</table>
+
+  <p>context.results: {{context.results}}
+  <p>results: {{results}}

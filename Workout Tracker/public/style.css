@@ -1,0 +1,98 @@
+html {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+body {
+    position: absolute;
+	background-color: white;
+	margin:0px;
+	border: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+#outer {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	border: 1px;
+	padding: 0px;
+}
+
+#inner {
+	width: 800px;
+	height: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+p {
+	font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+	font-size: 18px;
+	font-variant: normal;
+}
+
+.smallText {
+	font-size:12px;
+}
+
+#tableEdit {
+	border: 2px dashed;
+	margin: 0px;
+	padding: 10px;
+}
+
+#formEntry {
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 300px;
+	border: 0px;
+}
+
+#editLabel {
+	left: 10px;
+	bottom: 20px;
+	font-weight: bold;
+	z-index:1;
+	background-color: white;
+}
+
+#editTable {
+	border: 0px;
+	margin: 5px;
+    background-color: antiquewhite
+}
+
+.borderless {
+	border: 0px;
+}
+
+h2 {
+	margin-top: 0px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#editRow, #deleteRow {
+	margin: 0px;
+}
+
+#dataTable {
+	padding: 0px;
+	margin: 0px;
+	border: 1px dotted;
+	width: 770px;
+    background-color: antiquewhite
+}
+
+td {
+	border: 1px dashed;
+	padding: 1px;
+}
