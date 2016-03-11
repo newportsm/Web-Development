@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Weather Search</title>
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<title>Weather Search</title>
   </head>
   <body>
-    
-      <form>
+    <div class="container-fluid">
+      <form class="form-inline">
         <fieldset>
           <legend>|Weather Search|</legend>
           <br>
+          <div class="form-group">
           <label>Enter City</label>
-          <input type="text" name="city" id="cityName" value= ""><br>
+          <input type="text" name="city" id="cityName" value= "">
+          <div class="form-group">
           <label>[or] Zip Code</label>
-          <input type="text" name="zip" id="zipCode" value =""><br>
-          <br>
-          <input type="Submit" id="submit"><br>
+          <input type="text" name="zip" placeholder="*****" id="zipCode" value ="">
+          </div>
+          <button type="submit" id="submit" class="btn btn-default">Submit</button>
         </fieldset>
       </form>
       
+      <br>
+      <br>
       <div>
-        <ul>
-          <li><span>City: </span><span id="city"></span></li>
-          <li><span>Description: </span><span id="describe"></span></li>
-          <li><span>Temperature: </span><span id="temp"></span></li>
-          <li><span>Humidity: </span><span id="humid"></span></li>
+        <ul class="list-group">
+          <li class="list-group-item"><span>City: </span><span id="city"></span></li>
+          <li class="list-group-item"><span>Description: </span><span id="describe"></span></li>
+          <li class="list-group-item"><span>Temperature: </span><span id="temp"></span></li>
+          <li class="list-group-item"><span>Humidity: </span><span id="humid"></span></li>
         </ul>  
+      </div>
       </div>
       
       <script src="weatherJS.js"></script>
+ 
   </body>
 </html>
